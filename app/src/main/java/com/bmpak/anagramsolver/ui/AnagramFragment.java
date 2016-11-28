@@ -23,15 +23,16 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
 import com.bmpak.anagramsolver.R;
 import com.bmpak.anagramsolver.dictionary.Dictionary;
 import com.bmpak.anagramsolver.utils.AnagramTextWatcher;
 import com.bmpak.anagramsolver.utils.AppPrefs;
 import com.bmpak.anagramsolver.utils.ViewUtils;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.realm.Realm;
@@ -76,6 +77,10 @@ public class AnagramFragment extends Fragment implements AnagramTextWatcher.OnWo
 
     @InjectView(R.id.reportStatus)
     TextView reportStatus;
+
+    @InjectView(R.id.result_section)
+    LinearLayout resultSection;
+
 
     /**
      * {@link com.bmpak.anagramsolver.utils.AnagramTextWatcher} instance.
@@ -124,7 +129,7 @@ public class AnagramFragment extends Fragment implements AnagramTextWatcher.OnWo
         inputWordET.addTextChangedListener(anagramTextWatcher);
         inputWordET.setTypeface(
                 Typeface.createFromAsset(getResources().getAssets(),
-                        "font/RobotoSlab-Regular.ttf"), Typeface.BOLD
+                        "font/bebas.ttf"), Typeface.BOLD
         );
         inputWordET.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
 
@@ -226,9 +231,11 @@ public class AnagramFragment extends Fragment implements AnagramTextWatcher.OnWo
 
         //flag to remain the right and left lines
         if (wordsCount == -1) {
+            resultSection.setVisibility(View.INVISIBLE);
             reportStatus.setText("");
             reportStatus.setVisibility(View.INVISIBLE);
         } else {
+            resultSection.setVisibility(View.VISIBLE);
             reportStatus.setVisibility(View.VISIBLE);
             if (wordsCount == 0) {
                 reportStatus.setText(getResources().getString(R.string.not_found));

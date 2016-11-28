@@ -4,7 +4,7 @@
     <item>
         <shape>
             <solid android:color="@color/search_container_background" />
-            <corners android:radius="5dp" />
+            <corners android:radius="2dp" />
         </shape>
     </item>
 

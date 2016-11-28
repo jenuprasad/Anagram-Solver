@@ -22,7 +22,7 @@
         android:layout_height="1px"
         android:layout_centerVertical="true" />
 
-    <com.bmpak.anagramsolver.ui.view.MyTextView
+    <com.bmpak.anagramsolver.ui.view.Bebas
         android:id="@+id/select_languages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

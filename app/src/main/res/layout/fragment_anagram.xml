@@ -66,6 +66,7 @@
         android:layout_below="@+id/search_section"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="20dp"
+        android:visibility="gone"
         android:background="@drawable/result_container"
         android:orientation="vertical">
 
@@ -73,30 +74,14 @@
             android:id="@+id/report_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center">
+            android:gravity="left">
 
-            <com.bmpak.anagramsolver.ui.view.MyTextView
+            <com.bmpak.anagramsolver.ui.view.Bebas
                 android:id="@+id/reportStatus"
+                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
                 android:textColor="@color/found" />
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:layout_centerInParent="true"
-                android:layout_marginRight="10dp"
-                android:layout_toRightOf="@+id/reportStatus"
-                android:background="@color/found" />
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="10dp"
-                android:layout_toLeftOf="@+id/reportStatus"
-                android:background="@color/found" />
         </RelativeLayout>
 
         <android.support.v4.widget.SwipeRefreshLayout

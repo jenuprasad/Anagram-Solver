@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.bmpak.anagramsolver.ui.view.MyTextView
+    <com.bmpak.anagramsolver.ui.view.Bebas
         android:id="@+id/list_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
+        android:gravity="left"
         android:layout_margin="10dip"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/list_text" />

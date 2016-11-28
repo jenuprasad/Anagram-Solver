@@ -22,7 +22,7 @@ import java.util.Map;
 
 import com.bmpak.anagramsolver.R;
 import com.bmpak.anagramsolver.dictionary.Dictionary;
-import com.bmpak.anagramsolver.ui.view.MyTextView;
+import com.bmpak.anagramsolver.ui.view.Bebas;
 import com.bmpak.anagramsolver.utils.ViewUtils;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -80,7 +80,7 @@ public class SplashFragment extends Fragment implements View.OnClickListener {
     Button installBtn;
 
     @InjectView(R.id.select_languages)
-    MyTextView message;
+    Bebas message;
 
     @InjectView(R.id.en_dict)
     ImageButton enDictBtn;

@@ -41,7 +41,7 @@
     <item>
         <shape>
             <solid android:color="@color/result_container_background" />
-            <corners android:radius="3dp" />
+            <corners android:radius="1dp" />
         </shape>
     </item>
 
